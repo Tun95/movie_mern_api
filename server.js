@@ -2,7 +2,7 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import http from "http";
-// import path from "path";
+import path from "path";
 import mongoose from "mongoose";
 import morgan from "morgan";
 import "dotenv/config";
