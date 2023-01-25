@@ -34,11 +34,11 @@ app.use((req, res, next) => {
 
 app.use("/api/v1", routes);
 
-// const _dirname = path.resolve();
-// app.use(express.static(path.join(_dirname, "/client/build")));
-// app.get("*", (req, res) =>
-//   res.sendFile(path.join(_dirname, "/client/build/index.html"))
-// );
+const _dirname = path.resolve();
+app.use(express.static(path.join(_dirname, "/client/build")));
+app.get("*", (req, res) =>
+  res.sendFile(path.join(_dirname, "/client/build/index.html"))
+);
 
 const port = process.env.PORT || 5000;
 const server = http.createServer(app);
